@@ -33,7 +33,7 @@ namespace BackEnd.Controllers
             // Recupera o usuário
             var user = UserRepository.Get(model.Email, model.Senha);
 
-            // Verifica se o usuário existe
+            // Nao retornou nada, entao o usuario nao existe
             if (user == null)
                 return NotFound(new Resposta("Usuário ou senha inválidos", 404 ));
 
